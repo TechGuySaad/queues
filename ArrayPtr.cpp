@@ -58,11 +58,39 @@ void queue :: eque(int x)
     *rear = x;
 }
 
+
+void queue :: deque()
+{
+    
+    if(front == NULL && rear == NULL)
+    {
+        cout<<"Queue underflow.\n";
+        return;
+    }
+
+
+    if(front != end)
+    {
+        front++;
+        return;
+ 
+    }
+
+    if (front == end)
+    {
+        front = NULL;
+        rear = NULL;
+        return;
+    }
+
+}
+
 void queue:: display()
 {
     int *f;
     f = front;
-    if(front == NULL)
+
+    if(front == NULL && rear == NULL)
     {
         cout<<"Nothing to print.\n";
         return;
@@ -102,11 +130,24 @@ int main()
     obj.eque(1);
     obj.eque(2);
     obj.eque(3);
-    obj.eque(2);
+    obj.display();
+    obj.deque();
+    obj.display();
+    obj.deque();
+    obj.display();
+    obj.deque();
+    obj.display();
+    
+
+
+
+
     
     
 
     
-    obj.display();
+    
+
+
 
 }
