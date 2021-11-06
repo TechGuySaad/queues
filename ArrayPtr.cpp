@@ -7,20 +7,21 @@ using namespace std;
 class queue
 {
     int *que, *front, *rear, *end;
+    int size = 3;
 
 
     public:
 
     queue()
     {
-        que = new int[4];
+        que = new int[size];
         front = NULL;
         rear = NULL;
 
         
         end = que;
 
-        for(int i = 0; i<10 ; i++)
+        for(int i = 0; i<size-1; i++)
         {
             end++;
 
@@ -45,7 +46,7 @@ void queue :: eque(int x)
 
     }
 
-    if(rear ==NULL)
+    if(rear == NULL)
     {
         rear = que;
         front = que;
@@ -69,7 +70,7 @@ void queue:: display()
     }
 
     
-
+    
     while(front != rear)
     {
         cout<<*front<<",";
@@ -86,7 +87,7 @@ void queue:: display()
 
     if(front == rear)
     {
-        cout<<*front<<endl;
+        cout<<"{"<<*front<<"}\n";
         front = f;
         return;
 
@@ -101,7 +102,11 @@ int main()
     obj.eque(1);
     obj.eque(2);
     obj.eque(3);
-    obj.eque(4);
+    obj.eque(2);
+    
+    
+
+    
     obj.display();
 
 }
