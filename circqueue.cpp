@@ -111,8 +111,9 @@ int main()
     obj.eque(4);
     obj.deque();
     obj.deque();
-    obj.deque();
-    obj.deque();
+    obj.eque(5);//circular starts
+    obj.eque(6);
+    obj.eque(7); // overflow
     
 
 }
