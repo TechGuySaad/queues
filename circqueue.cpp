@@ -115,8 +115,20 @@ int main()
     //obj.eque(6);
     //obj.eque(7); // overflow
 
+    obj.deque();
+    obj.eque(1);
+    obj.deque();
+    obj.eque(1);
+    obj.eque(2);
+    obj.eque(3);
+    obj.eque(4);
+    obj.eque(5);
+    obj.deque();
+    obj.deque();
+    obj.eque(1);
 
-    
+
+
     
 
 }
